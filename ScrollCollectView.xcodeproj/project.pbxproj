@@ -20,6 +20,9 @@
 		3DC6899E1D6EA044008EF34D /* LoanMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6899C1D6EA044008EF34D /* LoanMenuCell.m */; };
 		3DC6899F1D6EA044008EF34D /* LoanMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DC6899D1D6EA044008EF34D /* LoanMenuCell.xib */; };
 		3DC689A31D6F02D2008EF34D /* UIView+ViewFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC689A21D6F02D2008EF34D /* UIView+ViewFrame.m */; };
+		3DFACA5D1D6FCFCA00F610C0 /* ContainCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFACA5C1D6FCFCA00F610C0 /* ContainCollection.m */; };
+		3DFACA641D6FD02400F610C0 /* ContainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFACA621D6FD02400F610C0 /* ContainCollectionViewCell.m */; };
+		3DFACA651D6FD02400F610C0 /* ContainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DFACA631D6FD02400F610C0 /* ContainCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,11 @@
 		3DC6899D1D6EA044008EF34D /* LoanMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoanMenuCell.xib; sourceTree = "<group>"; };
 		3DC689A11D6F02D2008EF34D /* UIView+ViewFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewFrame.h"; sourceTree = "<group>"; };
 		3DC689A21D6F02D2008EF34D /* UIView+ViewFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewFrame.m"; sourceTree = "<group>"; };
+		3DFACA5B1D6FCFCA00F610C0 /* ContainCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainCollection.h; sourceTree = "<group>"; };
+		3DFACA5C1D6FCFCA00F610C0 /* ContainCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainCollection.m; sourceTree = "<group>"; };
+		3DFACA611D6FD02400F610C0 /* ContainCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainCollectionViewCell.h; sourceTree = "<group>"; };
+		3DFACA621D6FD02400F610C0 /* ContainCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainCollectionViewCell.m; sourceTree = "<group>"; };
+		3DFACA631D6FD02400F610C0 /* ContainCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContainCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +123,10 @@
 		3DC689601D6E95E5008EF34D /* ScrollCollectView */ = {
 			isa = PBXGroup;
 			children = (
+				3DFACA591D6FCEA900F610C0 /* MainViewController */,
 				3DC689941D6E9603008EF34D /* TopView */,
-				3DC689671D6E95E5008EF34D /* ViewController.h */,
-				3DC689681D6E95E5008EF34D /* ViewController.m */,
-				3DC6896F1D6E95E6008EF34D /* LaunchScreen.storyboard */,
+				3DFACA5A1D6FCF4E00F610C0 /* ContainView */,
+				3DC689A01D6F012E008EF34D /* UIViewCategory */,
 				3DC689611D6E95E5008EF34D /* Supporting Files */,
 			);
 			path = ScrollCollectView;
@@ -130,6 +138,7 @@
 				3DC689641D6E95E5008EF34D /* AppDelegate.h */,
 				3DC689651D6E95E5008EF34D /* AppDelegate.m */,
 				3DC6896A1D6E95E6008EF34D /* Main.storyboard */,
+				3DC6896F1D6E95E6008EF34D /* LaunchScreen.storyboard */,
 				3DC6896D1D6E95E6008EF34D /* Assets.xcassets */,
 				3DC689721D6E95E6008EF34D /* Info.plist */,
 				3DC689621D6E95E5008EF34D /* main.m */,
@@ -158,7 +167,6 @@
 		3DC689941D6E9603008EF34D /* TopView */ = {
 			isa = PBXGroup;
 			children = (
-				3DC689A01D6F012E008EF34D /* UIViewCategory */,
 				3DC689951D6E96E0008EF34D /* TopMenuView.h */,
 				3DC689961D6E96E0008EF34D /* TopMenuView.m */,
 				3DC689981D6E9D97008EF34D /* LoanMenuView.h */,
@@ -177,6 +185,27 @@
 				3DC689A21D6F02D2008EF34D /* UIView+ViewFrame.m */,
 			);
 			name = UIViewCategory;
+			sourceTree = "<group>";
+		};
+		3DFACA591D6FCEA900F610C0 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3DC689671D6E95E5008EF34D /* ViewController.h */,
+				3DC689681D6E95E5008EF34D /* ViewController.m */,
+			);
+			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		3DFACA5A1D6FCF4E00F610C0 /* ContainView */ = {
+			isa = PBXGroup;
+			children = (
+				3DFACA5B1D6FCFCA00F610C0 /* ContainCollection.h */,
+				3DFACA5C1D6FCFCA00F610C0 /* ContainCollection.m */,
+				3DFACA611D6FD02400F610C0 /* ContainCollectionViewCell.h */,
+				3DFACA621D6FD02400F610C0 /* ContainCollectionViewCell.m */,
+				3DFACA631D6FD02400F610C0 /* ContainCollectionViewCell.xib */,
+			);
+			name = ContainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DFACA651D6FD02400F610C0 /* ContainCollectionViewCell.xib in Resources */,
 				3DC6899F1D6EA044008EF34D /* LoanMenuCell.xib in Resources */,
 				3DC689711D6E95E6008EF34D /* LaunchScreen.storyboard in Resources */,
 				3DC6896E1D6E95E6008EF34D /* Assets.xcassets in Resources */,
@@ -313,12 +343,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DFACA641D6FD02400F610C0 /* ContainCollectionViewCell.m in Sources */,
 				3DC689691D6E95E5008EF34D /* ViewController.m in Sources */,
 				3DC689A31D6F02D2008EF34D /* UIView+ViewFrame.m in Sources */,
 				3DC6899A1D6E9D97008EF34D /* LoanMenuView.m in Sources */,
 				3DC689661D6E95E5008EF34D /* AppDelegate.m in Sources */,
 				3DC689631D6E95E5008EF34D /* main.m in Sources */,
 				3DC6899E1D6EA044008EF34D /* LoanMenuCell.m in Sources */,
+				3DFACA5D1D6FCFCA00F610C0 /* ContainCollection.m in Sources */,
 				3DC689971D6E96E0008EF34D /* TopMenuView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +575,7 @@
 				3DC6898D1D6E95E7008EF34D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DC6898E1D6E95E7008EF34D /* Build configuration list for PBXNativeTarget "ScrollCollectViewTests" */ = {
 			isa = XCConfigurationList;
@@ -551,6 +584,7 @@
 				3DC689901D6E95E7008EF34D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DC689911D6E95E7008EF34D /* Build configuration list for PBXNativeTarget "ScrollCollectViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -559,6 +593,7 @@
 				3DC689931D6E95E7008EF34D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
