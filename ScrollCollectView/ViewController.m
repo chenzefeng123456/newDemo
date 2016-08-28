@@ -7,6 +7,14 @@
 //
 
 #import "ViewController.h"
+#import "TopMenuView.h"
+#import "NewContainViewController.h"
+#import "HotViewController.h"
+#import "LearnAndEaxmViewController.h"
+#import "YoungViewController.h"
+#import "BabyViewController.h"
+#import "SexStutyViewController.h"
+#import "LoveUpViewController.h"
 
 @interface ViewController ()
 
@@ -16,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+   
 }
 
 - (void)didReceiveMemoryWarning {

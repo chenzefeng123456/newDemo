@@ -22,8 +22,13 @@
         self.dataSource = self;
         [self registerNib:[UINib nibWithNibName:@"ContainCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:NSStringFromClass([ContainCollectionViewCell class])];
         self.backgroundColor = [UIColor clearColor];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ScrollViewItem:) name:LoanSelectItemNotification object:nil];
     }
     return self;
+}
+
+- (void)ScrollViewItem:(NSNotificationCenter *)center{
+    [self scrollToItemAtIndexPath:[center valueForKey:@"object"] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
    return  self.source.count;
@@ -46,7 +51,11 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     return CGSizeMake(self.frame.size.width, self.frame.size.height-64);
 }
-
-
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    NSInteger index = scrollView.contentOffset.x;
+    NSIndexPath *path = [NSIndexPath indexPathForItem:index inSection:0];
+    [[NSNotificationCenter defaultCenter] postNotificationName:LoanScrollContentNotification object:path];
+}
 
 @end

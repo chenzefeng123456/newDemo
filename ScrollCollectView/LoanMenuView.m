@@ -14,7 +14,6 @@
 #import "LoanMenuView.h"
 #import "LoanMenuCell.h"
 #import "UIView+ViewFrame.h"
-#define LoanScrollContentNotification @"LoanScrollContentNotification"
 @interface LoanMenuView ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property(nonatomic,strong) UIView *shadow;
 @end
@@ -57,10 +56,11 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
+    [self scrollSelectView:indexPath];
+    [[NSNotificationCenter defaultCenter] postNotificationName:LoanSelectItemNotification object:indexPath];
 }
 - (void)receiveScrollItemNotification:(NSNotificationCenter *)center{
-    
+    [self scrollSelectView:[center valueForKey:@"object"]];
 }
 
 - (void)scrollSelectView:(NSIndexPath *)path{
